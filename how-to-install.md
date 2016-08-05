@@ -1,8 +1,8 @@
 #1. Prepare
 
-**step 1.1:** Đảm bảo trước khi cài đăt:
+**step 1.1:** Kiểm tra trước khi cài đăt:
 
-(để chắc chắn APT làm việc được với https method và các chứng chỉ CA đã được cài đặt)
+(để chắc chắn *APT* làm việc được với *https method* và các chứng chỉ *CA* đã được cài đặt)
 > apt-get install apt-transport-https ca-certificates
 
 **step 1.2:** add *GPG* key.
@@ -13,8 +13,8 @@
 
 > vim /etc/apt/sources.list.d/docker.list
 
-(if docker.list doesn't exist, create it)
- add an entry/edit:
+(tạo file docker.list nếu chưa có)
+ Sau đó thêm 1 entry như sau (chọn theo ver ubuntu của bạn):
 ```
  The possible entries are:
 
@@ -47,24 +47,20 @@ Xóa repo cũ (nếu có)
 
 > apt-cache policy docker-engine
 
-Cuối cùng chạy lệnh để hoàn thiện quá trình cài đặt:
+Có thể chạy thêm lệnh:
 
 > apt-get upgrade
-
-## To install the linux-image-extra package
 
 **Install the recommended package**
 
 > apt-get install linux-image-extra-$(uname -r)
 
-#Start Install Docker
-
-**Install Docker**
+**step 1.6:** Install Docker
 
 > apt-get install docker-engine
 > apt-get install -y docker-engine
 
-**check that it's running**
+**step 1.7:** check that it's running
 
 > systemctl status docker
 <src ='http://imgur.com/a/b3MpD'>
