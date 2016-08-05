@@ -35,23 +35,23 @@
   >  deb https://apt.dockerproject.org/repo ubuntu-xenial main
 ```
 
-**step 1.4:** update APT package index
+**step 1.4:**  update APT package index
 
 > apt-get update
 
-purge the old repo if it exists
+Xóa repo cũ (nếu có)
 
 > apt-get purge lxc-docker
 
-Verify that APT is pulling from the right repository
+**step 1.5:** Verify that APT is pulling from the right repository
 
 > apt-cache policy docker-engine
 
-after all
+Cuối cùng chạy lệnh để hoàn thiện quá trình cài đặt:
 
 > apt-get upgrade
 
-#1.2: To install the linux-image-extra package
+## To install the linux-image-extra package
 
 **Install the recommended package**
 
@@ -71,29 +71,29 @@ after all
 
 #2. Using the Docker Command
 
-To view all available subcommands, type:
+Xem tất cả các câu lệnh có trong *docker*:
 
 >  docker
 
-To view system-wide information about Docker, use
+Xem thông tin về Docker:
 
 > docker info
 
-#3. Working with Docker Images
+#3. Docker Images
 
-To check whether you can access and download images from Docker Hub, type:
+Để kiểm tra liệu rằng bạn có thể truy cập và download images từ Docker Hub hay không:
 
 > docker run hello-world
 
-You can search for images available on Docker Hub
+Bạn cũng có thể tìm images có tồn tại trên Docker Hub hay không:
 
 > docker search ubuntu
 
-to pull it:
+Để kéo (tải) nó:
 
 > docker pull ubuntu
 
-to run image:
+run image:
 
 > docker run ubuntu
 
