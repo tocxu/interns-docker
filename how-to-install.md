@@ -125,6 +125,8 @@ Trong phần này trình bày cách làm thế nào để lưu lại trạng th�
 
 > docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
 
-Ví dụ: 
+Ví dụ:
 
-> docker commit -m "added node.js" -a "Sunday Ogwu-Chinuwa" d9b100f2f636 finid/ubuntu-nodejs
+> docker commit -m "added node.js" -a "Sunday Ogwu-Chinuwa" 2119b163b5a2 finid/ubuntu-nodejs
+
+<img src="http://i.imgur.com/L2FR3FX.png"/>
