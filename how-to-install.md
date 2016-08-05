@@ -2,7 +2,7 @@
 
 **step 1.1:** Đảm bảo trước khi cài đăt:
 
-(đẻ chắc chắn APT làm việc được với https method và các chứng chỉ CA đã được cài đặt)
+(để chắc chắn APT làm việc được với https method và các chứng chỉ CA đã được cài đặt)
 > apt-get install apt-transport-https ca-certificates
 
 **step 1.2:** add *GPG* key.
@@ -35,18 +35,36 @@
   >  deb https://apt.dockerproject.org/repo ubuntu-xenial main
 ```
 
-> apt-get autoremove
+**step 1.4:** update APT package index
 
-**step 1.2:**
-
-> apt-get install apt-transport-https ca-certificates
 > apt-get update
-> apt-get install apt-transport-https ca-certificates
-> curl -sSL https://get.docker.com/ubuntu/ | sudo sh
-> apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-> ls /etc/apt/sources.list.d/
 
-> sudo apt-get update
-> cat /etc/apt/sources.list.d/docker.list
+purge the old repo if it exists
+
+> apt-get purge lxc-docker
+
+Verify that APT is pulling from the right repository
+
 > apt-cache policy docker-engine
-> apt-get upgrade -y
+
+after all
+
+> apt-get upgrade
+
+#1.2: To install the linux-image-extra package
+
+**Install the recommended package**
+
+> apt-get install linux-image-extra-$(uname -r)
+
+#Start Install Docker
+
+**Install Docker**
+
+> apt-get install docker-engine
+> apt-get install -y docker-engine
+
+**check that it's running**
+
+> systemctl status docker
+<src ='http://imgur.com/a/b3MpD'>
