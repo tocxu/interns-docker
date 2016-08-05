@@ -68,3 +68,37 @@ after all
 
 > systemctl status docker
 <src ='http://imgur.com/a/b3MpD'>
+
+#2. Using the Docker Command
+
+To view all available subcommands, type:
+
+>  docker
+
+To view system-wide information about Docker, use
+
+> docker info
+
+#3. Working with Docker Images
+
+To check whether you can access and download images from Docker Hub, type:
+
+> docker run hello-world
+
+You can search for images available on Docker Hub
+
+> docker search ubuntu
+
+to pull it:
+
+> docker pull ubuntu
+
+to run image:
+
+> docker run ubuntu
+
+xem các images đã được download về máy:
+
+> docker images
+
+#4. Running a Docker Container
