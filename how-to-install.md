@@ -152,3 +152,20 @@ Ví dụ:
 > docker commit -m "added node.js" -a "I'm Tocxu" 2119b163b5a2 finid/ubuntu-nodejs
 
 <img src="http://i.imgur.com/L2FR3FX.png"/>
+
+#7. Listing Docker Containers
+
+> docker ps
+
+view all container:
+> docker ps -a
+
+> docker ps -l
+
+stop a running or active container
+> docker stop container-id
+
+#8. Pushing Docker Images to a Docker Repository
+> docker login -u docker-registry-username
+
+> docker push docker-registry-username/docker-image-name
