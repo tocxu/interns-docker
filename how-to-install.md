@@ -98,3 +98,7 @@ xem các images đã được download về máy:
 > docker images
 
 #4. Running a Docker Container
+
+> docker run -it ubuntu
+
+< img src="http://imgur.com/a/fhohe">
