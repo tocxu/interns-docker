@@ -1,6 +1,6 @@
 #1. Prepare
 
-**step 1.1 Kiểm tra trước khi cài đăt: **
+**step 1.1 Kiểm tra trước khi cài đăt:**
 
 (để chắc chắn *APT* làm việc được với *https method* và các chứng chỉ *CA* đã được cài đặt)
 > apt-get install apt-transport-https ca-certificates
@@ -101,6 +101,15 @@ xem các images đã được download về máy:
 
 > docker run -it ubuntu
 
-![alt tag](http://imgur.com/a/fhohe)
-
 <img src="http://i.imgur.com/gsMJTo5.png"/>
+
+**2119b163b5a2** tại dấu nhắc lệnh là Id của container
+
+Bây giờ bạn có thể chạy bất kỳ lệnh bên trong container. Ví dụ, chúng ta hãy cập nhật cơ sở dữ liệu gói bên trong container. Không cần phải thêm tiền tố bất kỳ lệnh với lệnh sudo, bởi vì bạn đang hoạt động bên trong container với quyền root:
+> apt-get update
+
+cài đặt bất kỳ app nào bạn muốn. Ví dụ cài NodeJS:
+
+> apt-get install -y nodejs
+
+#5. Committing Changes in a Container to a Docker Image
