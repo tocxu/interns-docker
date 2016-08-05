@@ -101,4 +101,5 @@ xem các images đã được download về máy:
 
 > docker run -it ubuntu
 
+![alt tag](http://imgur.com/a/fhohe)
 <img src='http://imgur.com/a/fhohe'>
