@@ -103,4 +103,4 @@ xem các images đã được download về máy:
 
 ![alt tag](http://imgur.com/a/fhohe)
 
-<img src="http://imgur.com/gsMJTo5"/>
+<img src="http://i.imgur.com/gsMJTo5.png"/>
