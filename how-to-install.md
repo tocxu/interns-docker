@@ -112,28 +112,6 @@ cài đặt bất kỳ app nào bạn muốn. Ví dụ cài NodeJS:
 
 > apt-get install -y nodejs
 
-**Enable UFW forwarding**
-
-kiểm tra:
-> sudo ufw status
-
-Nếu chưa active:
-> ufw enable
-
-Edit file: **/etc/default/ufw**
-
-Set the DEFAULT_FORWARD_POLICY policy to:
-
-```
-DEFAULT_FORWARD_POLICY="ACCEPT"
-```
-
-reload ufw
-> ufw reload
-
-
-
-
 #6. Committing Changes in a Container to a Docker Image
 Bắt đầu với một Docker image, bạn có thể tạo, chỉnh sửa, và xóa các tập tin giống như một máy ảo. Nhưng tất cả hệ thống và thay đổi đó đều là tạm thời và sẽ mất đi nếu bạn chạy lại nó lần tiếp theo.
 
