@@ -55,17 +55,17 @@ Có thể chạy thêm lệnh:
 
 > apt-get install linux-image-extra-$(uname -r)
 
-**step 1.6 Install Docker:**
+#2.Install Docker
 
 > apt-get install docker-engine
 > apt-get install -y docker-engine
 
-**step 1.7 check that it's running:**
+**check that it's running:**
 
 > systemctl status docker
 <src ='http://imgur.com/a/b3MpD'>
 
-#2. Using the Docker Command
+#3. Using the Docker Command
 
 Xem tất cả các câu lệnh có trong *docker*:
 
@@ -75,7 +75,7 @@ Xem thông tin về Docker:
 
 > docker info
 
-#3. Docker Images
+#4. Docker Images
 
 Để kiểm tra liệu rằng bạn có thể truy cập và download images từ Docker Hub hay không:
 
@@ -97,7 +97,7 @@ xem các images đã được download về máy:
 
 > docker images
 
-#4. Running a Docker Container
+#5. Running a Docker Container
 
 > docker run -it ubuntu
 
@@ -112,7 +112,7 @@ cài đặt bất kỳ app nào bạn muốn. Ví dụ cài NodeJS:
 
 > apt-get install -y nodejs
 
-#5. Committing Changes in a Container to a Docker Image
+#6. Committing Changes in a Container to a Docker Image
 Bắt đầu với một Docker image, bạn có thể tạo, chỉnh sửa, và xóa các tập tin giống như một máy ảo. Nhưng tất cả hệ thống và thay đổi đó đều là tạm thời và sẽ mất đi nếu bạn chạy lại nó lần tiếp theo.
 
 Để giữ lại những thay đổi trong container khi khởi động lại của container cần phải sử dụng [Docker Data Volumes]().
