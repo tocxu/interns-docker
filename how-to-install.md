@@ -105,7 +105,7 @@ xem các images đã được download về máy:
 
 **2119b163b5a2** tại dấu nhắc lệnh là Id của container
 
-Bây giờ bạn có thể chạy bất kỳ lệnh bên trong container. Ví dụ, chúng ta hãy cập nhật cơ sở dữ liệu gói bên trong container. Không cần phải thêm tiền tố bất kỳ lệnh với lệnh sudo, bởi vì bạn đang hoạt động bên trong container với quyền root:
+Bây giờ bạn có thể chạy lệnh bất kỳ bên trong container. Ví dụ, chúng ta hãy cập nhật cơ sở dữ liệu gói bên trong container. Không cần phải thêm tiền tố **sudo**, bởi vì bạn đang hoạt động bên trong container với quyền root:
 > apt-get update
 
 cài đặt bất kỳ app nào bạn muốn. Ví dụ cài NodeJS:
@@ -113,3 +113,18 @@ cài đặt bất kỳ app nào bạn muốn. Ví dụ cài NodeJS:
 > apt-get install -y nodejs
 
 #5. Committing Changes in a Container to a Docker Image
+Bắt đầu với một Docker image, bạn có thể tạo, chỉnh sửa, và xóa các tập tin giống như một máy ảo. Nhưng tất cả hệ thống và thay đổi đó đều là tạm thời và sẽ mất đi nếu bạn chạy lại nó lần tiếp theo.
+
+Để giữ lại những thay đổi trong container khi khởi động lại của container cần phải sử dụng [Docker Data Volumes]().
+
+Trong phần này trình bày cách làm thế nào để lưu lại trạng thái của một container như một image Docker mới.
+
+**To Save**
+
+> exit
+
+> docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
+
+Ví dụ: 
+
+> docker commit -m "added node.js" -a "Sunday Ogwu-Chinuwa" d9b100f2f636 finid/ubuntu-nodejs
