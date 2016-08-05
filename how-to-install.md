@@ -127,6 +127,6 @@ Trong phần này trình bày cách làm thế nào để lưu lại trạng th�
 
 Ví dụ:
 
-> docker commit -m "added node.js" -a "Sunday Ogwu-Chinuwa" 2119b163b5a2 finid/ubuntu-nodejs
+> docker commit -m "added node.js" -a "I'm Tocxu" 2119b163b5a2 finid/ubuntu-nodejs
 
 <img src="http://i.imgur.com/L2FR3FX.png"/>
