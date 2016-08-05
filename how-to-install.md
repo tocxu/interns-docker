@@ -1,11 +1,11 @@
 #1. Prepare
 
-**step 1.1:** Kiểm tra trước khi cài đăt:
+**step 1.1 Kiểm tra trước khi cài đăt: **
 
 (để chắc chắn *APT* làm việc được với *https method* và các chứng chỉ *CA* đã được cài đặt)
 > apt-get install apt-transport-https ca-certificates
 
-**step 1.2:** add *GPG* key.
+**step 1.2 add *GPG* key:**
 
 > apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
@@ -35,7 +35,7 @@
   >  deb https://apt.dockerproject.org/repo ubuntu-xenial main
 ```
 
-**step 1.4:**  update APT package index
+**step 1.4  update APT package index:**
 
 > apt-get update
 
@@ -43,7 +43,7 @@ Xóa repo cũ (nếu có)
 
 > apt-get purge lxc-docker
 
-**step 1.5:** Verify that APT is pulling from the right repository
+**step 1.5 Verify that APT is pulling from the right:** repository
 
 > apt-cache policy docker-engine
 
@@ -55,12 +55,12 @@ Có thể chạy thêm lệnh:
 
 > apt-get install linux-image-extra-$(uname -r)
 
-**step 1.6:** Install Docker
+**step 1.6 Install Docker:**
 
 > apt-get install docker-engine
 > apt-get install -y docker-engine
 
-**step 1.7:** check that it's running
+**step 1.7 check that it's running:**
 
 > systemctl status docker
 <src ='http://imgur.com/a/b3MpD'>
