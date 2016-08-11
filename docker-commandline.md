@@ -78,3 +78,11 @@ uninstall the Docker pagkage:
 > rm -rf /var/lib/docker
 
 **You must delete the user created configuration files manually.**
+
+
+
+
+DOCKER_OPTS="-D --tls=true --tlscert=/var/docker/server.pem --tlskey=/var/docker/serverkey.pem -H tcp://45.124.93.110:80"
+
+when cannot connect to daemon:
+> sudo nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &
